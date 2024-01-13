@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
-from streamlit_folium import folium_static
 
-import folium
 
 
 
@@ -16,23 +14,8 @@ tab1, tab2 = st.tabs(["About", "Explore Wetlands"])
 with tab2:
 
     
-    def create_map(df):
-        tamilnadu_map = folium.Map(location=[11.1271, 78.6569], zoom_start=8)
-
-        for index, row in df.iterrows():
-            # Add a marker for each wetland
-            folium.Marker(
-                location=[row['lat'], row['long']],
-                tooltip=row['wet_lnd_name']
-            ).add_to(tamilnadu_map)
-
-        return tamilnadu_map
-    
-    
     st.title("Tamil Nadu Wetlands Map")
-    wetlands_map = create_map(df)
-    folium_static(wetlands_map)
-
+    st.image("https://tnswa.org/image/tn_ramsar_map.jpg")
 
 
     
@@ -141,4 +124,3 @@ with tab1:
     st.write("Explore the official website of the Tamil Nadu government or its environment and forest department. They often provide information on biodiversity, wildlife sanctuaries, and conservation initiatives.")
     st.link_button("Go to official *government wetlands website*", "https://www.tnswa.org/wetlands-of-tamil-nadu")
     
-
