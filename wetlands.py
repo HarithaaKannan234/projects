@@ -7,7 +7,7 @@ import folium
 
 
 
-file_path = "C:\\Users\\Admin\\Desktop\\Murdoch\\pranav\\wetlands.csv"
+file_path = "wetlands.csv"
 df = pd.read_csv(file_path, encoding='latin1')
 tab1, tab2 = st.tabs(["About", "Explore Wetlands"])
 
