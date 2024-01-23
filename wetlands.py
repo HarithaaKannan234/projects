@@ -1,10 +1,15 @@
 import streamlit as st
 import pandas as pd
+from streamlit_extras.let_it_rain import rain
 
-
-
-
-
+def example():
+    rain(
+        emoji="💧",
+        font_size=1,
+        falling_speed=3,
+        animation_length=5,
+    )
+example()
 file_path = "wetlands.csv"
 df = pd.read_csv(file_path, encoding='latin1')
 tab1, tab2 = st.tabs(["About", "Explore Wetlands"])
@@ -12,10 +17,11 @@ tab1, tab2 = st.tabs(["About", "Explore Wetlands"])
 
 
 with tab2:
-
-    
     st.title("Tamil Nadu Wetlands Map")
     st.image("https://tnswa.org/image/tn_ramsar_map.jpg")
+
+
+    
 
 
     
@@ -32,43 +38,55 @@ with tab2:
             if selected_wetland == "Chitrangudi Bird Sanctuary":
                 st.title("Chitrangudi Bird Sanctuary Overview")
                 st.write("Chitrangudi Bird Sanctuary, nestled in the Ramanathapuram district of Tamil Nadu, is a sanctuary of immense ecological significance. Located approximately 15 kilometers from the Gulf of Mannar, this avian haven boasts a rich biodiversity amidst its diverse landscape. From seasonal freshwater tanks to marshes and scrub forests, the sanctuary provides a varied habitat that attracts a plethora of bird species. Notable inhabitants include migratory and resident birds such as flamingos, herons, and various shorebirds. The sanctuary plays a pivotal role in avian biodiversity conservation, with dedicated efforts towards preserving wetland habitats, managing human activities, and fostering awareness about bird conservation.")
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/un52B4MEAuNWLn4G7")
             elif selected_wetland == "Gulf of Mannar Marine Biosphere Reserve":   
                 st.title("Gulf of Mannar Marine Biosphere Reserve Overview")
                 st.write("The Gulf of Mannar Marine Biosphere Reserve, situated between India and Sri Lanka, stands as a UNESCO Biosphere Reserve, recognized for its unparalleled marine diversity. The reserve's extensive coral reefs, seagrass beds, and mangroves contribute to its vital role in marine conservation. Beyond its natural wonders, the Gulf of Mannar holds significance in national and international protection initiatives, marking it as a sanctuary for diverse marine life.")
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/GzrECY8xa67969K48")
             elif selected_wetland == "Kanjirankulam Bird Sanctuary":   
                 st.title("Kanjirankulam Bird Sanctuary Overview")
                 st.write("Nestled in the heart of Tamil Nadu, the Kanjirankulam Bird Sanctuary beckons birdwatchers and nature enthusiasts alike. Its diverse habitat, enriched with wetlands, serves as a haven for various migratory and resident bird species. Conservation efforts are diligently employed to safeguard the sanctuary's unique ecology, ensuring the continued flourishing of its avian residents.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/rJ9gPyfVLRYdNiUt6")
             elif selected_wetland == "Karikili Bird Sanctuary":   
                 st.title("Karikili Bird Sanctuary Overview" )
                 st.write("The Karikili Bird Sanctuary in Tamil Nadu is a testament to the state's rich avian diversity. Providing a sanctuary for migratory birds, the habitat supports a delicate balance in its ecosystem. Conservation initiatives play a crucial role in preserving the sanctuary's unique biodiversity.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/ThxzbGr1oTLx9pJN8")
             elif selected_wetland == "Koonthankulam Bird Sanctuary":   
                 st.title("Koonthankulam Bird Sanctuary Overview")
                 st.write("Celebrated for its vibrant birdlife, the Koonthankulam Bird Sanctuary in Tamil Nadu captivates visitors, particularly birdwatchers. The sanctuary's wetland environment fosters a diverse array of bird species, making it a vital hub for conservation efforts and a serene retreat for nature enthusiasts.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/KDM2FwuV3kBryaDC7")
             elif selected_wetland == "Pallikaranai Marshland":   
                 st.title("Pallikaranai Marshland Overview")
                 st.write("The Pallikaranai Marshland in Tamil Nadu stands as a significant wetland ecosystem, characterized by its unique marshy environment. This crucial habitat supports a myriad of flora and fauna, contributing to the region's ecological balance. Conservation endeavors focus on sustaining the marshland's diverse ecology.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/tnMSbpxoau5Kof9V7")
             elif selected_wetland == "Pichavaram Mangrove":   
                 st.title("Pichavaram Mangrove Overview")
                 st.write("The Pichavaram Mangrove Forest in Tamil Nadu unfolds a mesmerizing tapestry of intricate mangrove trees. Beyond its scenic beauty, this biodiverse ecosystem plays a pivotal role in coastal conservation. The mangrove's resilience and unique features make it a crucial asset in preserving the coastal ecosystem.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/crF9PnbLbUUi3JSVA")
             elif selected_wetland == "Point Calimere Wildlife and Bird Sanctuary":   
                 st.title("Point Calimere Wildlife and Bird Sanctuary Overview")
                 st.write("Tucked away in Tamil Nadu, the Point Calimere Wildlife and Bird Sanctuary beckon wildlife enthusiasts with its diverse offerings. Providing a habitat for an array of bird species, the sanctuary stands as a testament to conservation efforts, ensuring the continued thriving of its avian residents.")    
-            elif selected_wetland == "Suchindram  Theroor wetland complex":   
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/xbPznikq4JS5AVNk9")
+            elif selected_wetland == "Suchindram Theroor wetland complex":   
                 st.title("Suchindram Theroor wetland complex Overview")
                 st.write("The Suchindram Theroor Wetland Complex in Tamil Nadu is a treasure trove of wetland ecosystems. Hosting various bird species, this complex plays an essential role in maintaining ecological balance. Conservation efforts strive to protect and sustain this unique wetland habitat.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/WFvY8WSuWsrfyADC7")
             elif selected_wetland == "Udayamarthandapuram Bird Sanctuary":   
                 st.title("Udayamarthandapuram Bird Sanctuary Overview")
                 st.write("The Udayamarthandapuram Bird Sanctuary in Tamil Nadu stands out for its diverse avian inhabitants. Conservation initiatives focus on safeguarding the sanctuary's ecological integrity, ensuring a conducive environment for its avian residents.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/44Fv8iWzTGp141Lw7")
             elif selected_wetland == "Vaduvur Bird Sanctuary":   
                 st.title("Vaduvur Bird Sanctuary Overview")
                 st.write("As one of the oldest bird sanctuaries in India, the Vedanthangal Bird Sanctuary in Tamil Nadu holds historical and ecological significance. Celebrated for its migratory bird population, the sanctuary serves as a testament to successful conservation efforts.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/GdN4G5sLp6CyVr6KA")
             elif selected_wetland == "Vellode Bird Sanctuary":   
                 st.title("Vellode Bird Sanctuary Overview")
                 st.write("The Vellode Bird Sanctuary in Tamil Nadu offers a haven for birdwatchers, showcasing diverse avian residents. Conservation initiatives prioritize the protection of the sanctuary's natural habitat, fostering a balanced ecosystem.")    
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/WzSHwkwwoc5PuqGz8")
             elif selected_wetland == "Vembannur Wetland complex":   
                 st.title("Vembannur Wetland Complex Overview")
                 st.write("The Vembannur Wetland Complex in Tamil Nadu is renowned for its expansive wetland ecosystem. Supporting various bird species, conservation efforts aim to preserve the vitality of this critical habitat, contributing to the region's biodiversity.")    
-   
+                st.link_button("wetlands location in *Google maps*", "https://maps.app.goo.gl/EFFoJb3Z4ECpTFPV6")
 
 
 
